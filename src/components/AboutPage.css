@@ -82,8 +82,8 @@
 /* Top Right Ambient Motto Badge matching Hero */
 .campus-sky-motto-badge {
   position: absolute;
-  top: 16%;
-  right: 14%;
+  top: 14%;
+  right: clamp(130px, 11vw, 190px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -120,8 +120,8 @@
 /* Right Vertical Ambient Keywords matching Hero */
 .campus-sky-keywords {
   position: absolute;
-  top: 12%;
-  right: 28px;
+  top: 10%;
+  right: clamp(20px, 2.2vw, 40px);
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -657,8 +657,8 @@
 @media (max-width: 1024px) {
   .about-hero-section {
     min-height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 36px;
+    padding-bottom: 30px;
     flex-direction: column;
   }
 
@@ -666,13 +666,36 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: 380px;
-    margin-top: 30px;
+    height: clamp(250px, 50vw, 380px);
+    margin-top: 26px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 14px 38px rgba(10, 35, 90, 0.1);
+    border: 1.5px solid rgba(219, 234, 254, 0.85);
   }
 
   .campus-artwork-frame {
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    mask-image: none;
+    -webkit-mask-image: none;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .campus-blended-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 36%;
+    border-radius: 18px;
+  }
+
+  /* Completely eliminate overlapping ambient sky text/badges on mobile/tablet */
+  .campus-sky-motto-badge,
+  .campus-sky-keywords,
+  .campus-sky-birds-wrap {
+    display: none !important;
   }
 
   .about-hero-left {
@@ -685,8 +708,67 @@
 }
 
 @media (max-width: 768px) {
+  .about-hero-content-wrapper {
+    padding: 16px 16px 0;
+  }
+
+  .about-badge {
+    font-size: 0.7rem;
+    letter-spacing: 1.8px;
+    padding: 5px 14px;
+    margin-bottom: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .about-title {
+    font-size: clamp(1.65rem, 6.2vw, 2.2rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
+  .about-motto {
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .about-lead {
+    font-size: 0.98rem;
+    line-height: 1.68;
+    margin-bottom: 22px;
+  }
+
   .about-feature-chips {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-chip-card {
+    padding: 10px 14px;
+  }
+
+  .about-campus-artwork {
+    height: clamp(210px, 56vw, 290px);
+    margin-top: 20px;
+    border-radius: 16px;
+  }
+
+  .campus-artwork-frame,
+  .campus-blended-img {
+    border-radius: 14px;
+  }
+
+  .about-floating-bar-section {
+    padding: 24px 16px;
+  }
+
+  .about-pill-card {
+    padding: 16px 14px;
+    border-radius: 20px;
+    gap: 16px;
   }
 
   .about-highlights-grid {
@@ -696,13 +778,45 @@
   .about-hl-item {
     border-right: none;
     border-bottom: 1px solid #e2e8f0;
+    padding: 10px 8px;
   }
 
   .about-hl-item:last-child {
     border-bottom: none;
   }
 
+  .about-quote-pill {
+    border-radius: 16px;
+    padding: 14px 18px;
+    max-width: 100%;
+  }
+
+  .about-triad-section {
+    padding: 30px 16px 50px;
+  }
+
+  .triad-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .triad-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.52rem;
+    line-height: 1.18;
+  }
+
+  .about-motto {
+    font-size: 0.74rem;
+    letter-spacing: 1.4px;
+  }
+
   .about-campus-artwork {
-    height: 280px;
+    height: 220px;
   }
 }
