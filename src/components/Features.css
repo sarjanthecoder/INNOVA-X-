@@ -1,0 +1,432 @@
+/* ========================================
+   Features Section — Floating Card Bar
+   ======================================== */
+
+.features-floating-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -20px;
+  padding: 0 clamp(16px, 3.5vw, 48px) 36px;
+  background: transparent;
+}
+
+.features-bar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.features-pill-bar {
+  display: flex;
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 40px rgba(10, 35, 90, 0.08), 0 2px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-pill-bar:hover {
+  box-shadow: 0 18px 50px rgba(10, 35, 90, 0.12), 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+/* 4 Feature Columns */
+.features-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex: 1;
+}
+
+.feature-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 24px;
+  border-right: 1px solid rgba(226, 232, 240, 0.8);
+  transition: background-color 0.2s ease;
+}
+
+.feature-cell:hover {
+  background-color: rgba(240, 246, 255, 0.6);
+}
+
+.feature-icon-wrapper {
+  color: #1a56db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon-wrapper svg {
+  width: 26px;
+  height: 26px;
+}
+
+.feature-cell-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.feature-cell-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3px;
+}
+
+.feature-h1,
+.feature-h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.8px;
+  color: #0b192c;
+  text-transform: uppercase;
+}
+
+.feature-cell-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #64748b;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Right Navy Quote Pill */
+.features-quote-pill {
+  background: linear-gradient(135deg, #123e98 0%, #0a2560 100%);
+  color: #ffffff;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  flex-shrink: 0;
+  min-width: 210px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.quote-mark {
+  font-family: 'Georgia', serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #60a5fa;
+  align-self: flex-start;
+  margin-top: -6px;
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.quote-line1,
+.quote-line2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #ffffff;
+  letter-spacing: -0.1px;
+}
+
+/* ========================================
+   Lower Sponsors / Organized By / CTA Banner
+   ======================================== */
+.home-sponsors-row {
+  display: grid;
+  grid-template-columns: 1.15fr auto 1fr 1.35fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  padding: 4px 0;
+}
+
+.home-sponsor-college {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.home-college-thumb {
+  width: 105px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 0.92;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.home-college-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-crest-thumb {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.home-org-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.22;
+}
+
+.home-org-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.home-org-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #071a5c;
+}
+
+.home-org-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #071a5c;
+}
+
+.home-org-place {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.home-sponsor-divider {
+  width: 1px;
+  height: 46px;
+  background: rgba(0, 102, 255, 0.16);
+}
+
+.home-sponsor-ih {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-ih-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.home-ih-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-ih-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.home-ih-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.home-ih-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #071a5c;
+}
+
+.home-ih-motto {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #126bff;
+  text-transform: uppercase;
+}
+
+/* Mountain Panoramic CTA Banner */
+.home-cta-mountain-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(7, 26, 92, 0.22);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-cta-mountain-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 102, 255, 0.35);
+}
+
+.home-mountain-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.home-mountain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(7, 26, 92, 0.96) 0%, rgba(11, 36, 120, 0.86) 45%, rgba(18, 107, 255, 0.58) 100%);
+  z-index: 2;
+}
+
+.home-mountain-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mountain-tag-top {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #93c5fd;
+  text-transform: uppercase;
+}
+
+.mountain-main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.mountain-tagline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #60a5fa;
+}
+
+.mountain-arrow-circle {
+  position: relative;
+  z-index: 3;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.22s ease;
+}
+
+.home-cta-mountain-card:hover .mountain-arrow-circle {
+  background: #ffffff;
+  color: #071a5c;
+  transform: scale(1.08);
+}
+
+.mountain-arrow-circle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.mountain-cursive-text {
+  position: absolute;
+  right: 68px;
+  bottom: 8px;
+  z-index: 3;
+  font-family: 'Caveat', cursive;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #dbeafe;
+  transform: rotate(-3deg);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .features-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature-cell:nth-child(2) {
+    border-right: none;
+  }
+  .feature-cell:nth-child(1),
+  .feature-cell:nth-child(2) {
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  }
+  .features-pill-bar {
+    flex-direction: column;
+  }
+  .features-quote-pill {
+    border-radius: 0;
+    justify-content: center;
+  }
+  .home-sponsors-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .home-sponsor-divider {
+    display: none;
+  }
+  .home-cta-mountain-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .features-columns {
+    grid-template-columns: 1fr;
+  }
+  .feature-cell {
+    border-right: none;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 16px 20px;
+  }
+  .features-pill-bar {
+    border-radius: 16px;
+  }
+  .home-sponsors-row {
+    grid-template-columns: 1fr;
+  }
+  .home-cta-mountain-card {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,631 @@
+/* ========================================================
+   5 CHALLENGE TRACKS — Ultra High Fidelity CSS
+   AI Generated HD Images, 3D Chrome Typography, Glassmorphism
+   ======================================================== */
+
+.tracks-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Seamless subtle icy blue gradient matching reference */
+  background: linear-gradient(
+    180deg,
+    #eff5fc 0%,
+    #f4f8fd 15%,
+    #f8fbfe 35%,
+    #f4f8fd 70%,
+    #eff5fc 100%
+  );
+  padding: 100px 0 50px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ── Left & Right Vertical Keywords ── */
+.tracks-left-keywords {
+  position: absolute;
+  top: 180px;
+  left: clamp(14px, 2.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tracks-left-keywords span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: rgba(15, 31, 58, 0.35);
+  line-height: 1.4;
+}
+
+.tracks-right-keywords {
+  position: absolute;
+  top: 250px;
+  right: clamp(14px, 2.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tracks-right-keywords span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: rgba(15, 31, 58, 0.35);
+  line-height: 1.4;
+}
+
+/* ── Top Right Cursive Script ── */
+.tracks-top-cursive {
+  position: absolute;
+  top: 140px;
+  right: clamp(24px, 4.5vw, 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: rotate(-7deg);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.tracks-top-cursive .cursive-text {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+  font-weight: 700;
+  color: #0b1a3d;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.tracks-top-cursive .cursive-underline {
+  width: 80%;
+  height: 2px;
+  background: #1a56db;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+/* ── Header Area ── */
+.tracks-header {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 36px;
+  padding: 0 24px;
+}
+
+.tracks-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.72rem, 1.1vw, 0.88rem);
+  font-weight: 800;
+  letter-spacing: 0.36em;
+  color: #0088ff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* ── 3D Metallic Chrome Title '5 CHALLENGE TRACKS' ── */
+.tracks-title-3d-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0.95;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+/* 3D Extrusion Layer */
+.tracks-title-extrusion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+  letter-spacing: -0.01em;
+  color: #030f2c;
+  text-shadow:
+    -1px 1px 0px #030d24,
+    -2px 2px 0px #041233,
+    -3px 3px 0px #061842,
+    -4px 4px 0px #082054,
+    -5px 5px 0px #0a296b,
+    -6px 6px 1px #051842,
+    -4px 8px 18px rgba(0, 15, 50, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ext-num {
+  color: #002b80;
+  text-shadow:
+    -1px 1px 0px #003db3,
+    -2px 2px 0px #002b80,
+    -3px 3px 0px #001f5c,
+    -4px 4px 0px #00143d,
+    0 0 20px rgba(0, 180, 255, 0.4);
+}
+
+/* Front Metallic Chrome Face */
+.tracks-title-front {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.chrome-num {
+  background: linear-gradient(
+    180deg,
+    #00e5ff 0%,
+    #0099ff 25%,
+    #ffffff 45%,
+    #2563eb 70%,
+    #0d2b78 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 0 16px rgba(0, 210, 255, 0.4));
+}
+
+.chrome-text {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef5ff 5%,
+    #7ca5f5 12%,
+    #1b4eb8 28%,
+    #0d2b78 48%,
+    #05184d 52%,
+    #001140 56%,
+    #002270 75%,
+    #0c48b0 92%,
+    #256eff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+  letter-spacing: -0.01em;
+}
+
+.tracks-sub-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.68rem, 1.1vw, 0.84rem);
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  color: #0b1a3d;
+  text-transform: uppercase;
+}
+
+.tracks-tagline-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0088ff, #1a56db);
+  border-radius: 3px;
+  margin: 8px auto 14px;
+}
+
+.tracks-lead-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1.1vw, 0.96rem);
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ── 5 Challenge Track Cards Grid ── */
+.tracks-grid-wrapper {
+  position: relative;
+  z-index: 3;
+  max-width: 1720px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 2vw, 32px);
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.track-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(220, 233, 248, 0.9);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(10, 31, 68, 0.07);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.track-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 46px rgba(26, 86, 219, 0.18);
+  border-color: rgba(37, 99, 235, 0.38);
+}
+
+/* Top Image Container */
+.track-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.track-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.track-card:hover .track-card-img {
+  transform: scale(1.08);
+}
+
+.track-card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, transparent 40%, rgba(0, 0, 0, 0.25) 100%);
+  pointer-events: none;
+}
+
+/* Number Badge '01' - '05' */
+.track-number-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.track-number-badge span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0b1a3d;
+  letter-spacing: 0.05em;
+}
+
+/* Floating Overlapping Icon Badge */
+.track-floating-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -24px;
+  margin-left: 18px;
+  position: relative;
+  z-index: 3;
+  transition: transform 0.3s ease;
+  background: #ffffff;
+}
+
+.track-card:hover .track-floating-badge {
+  transform: scale(1.1);
+}
+
+.track-floating-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-floating-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Card Body */
+.track-card-body {
+  padding: 16px 20px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.track-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #0a1b3a;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.track-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  color: #1e293b;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+/* Card Footer */
+.track-card-footer {
+  padding: 14px 20px 18px;
+  border-top: 1px solid rgba(226, 238, 252, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.track-card-motto {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.track-arrow-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(220, 233, 248, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a56db;
+  box-shadow: 0 2px 8px rgba(10, 31, 68, 0.06);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.track-arrow-circle svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.25s ease;
+}
+
+.track-card:hover .track-arrow-circle {
+  background: #1a56db;
+  color: #ffffff;
+  border-color: #1a56db;
+  box-shadow: 0 4px 12px rgba(26, 86, 219, 0.3);
+}
+
+.track-card:hover .track-arrow-circle svg {
+  transform: translateX(2px);
+}
+
+/* ── Bottom Section with Mountain Hiker & Globe ── */
+.tracks-bottom-section {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1720px;
+  width: 95%;
+  margin: 44px auto 0;
+  padding: 0 clamp(16px, 2vw, 32px);
+}
+
+/* Bottom-Left Mountain Hiker */
+.tracks-hiker-wrap {
+  position: relative;
+  width: clamp(160px, 18vw, 240px);
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hiker-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hiker-cursive {
+  position: absolute;
+  top: 15px;
+  right: -20px;
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+  font-weight: 700;
+  color: #0b1a3d;
+  line-height: 1.15;
+  transform: rotate(-8deg);
+  white-space: nowrap;
+}
+
+/* Bottom Center Pill Banner */
+.tracks-bottom-pill {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 9999px;
+  box-shadow: 0 8px 32px rgba(10, 31, 68, 0.08);
+  padding: 10px 28px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.tracks-pill-icon-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #2563eb 0%, #1a45b5 60%, #0f2e7a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(26, 86, 219, 0.35);
+  flex-shrink: 0;
+}
+
+.tracks-pill-icon-badge svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tracks-pill-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracks-pill-headline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight: 800;
+  color: #0a1b3a;
+  letter-spacing: -0.01em;
+}
+
+.tracks-pill-subline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #1a56db;
+  text-transform: uppercase;
+}
+
+.tracks-pill-divider {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  border-left: 1px solid rgba(15, 31, 58, 0.15);
+}
+
+.tracks-pill-event {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #0b1a3d;
+}
+
+.tracks-pill-motto {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #64748b;
+}
+
+/* Bottom-Right Dotted World Globe */
+.tracks-bottom-globe-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.bottom-globe-img {
+  width: clamp(70px, 9vw, 90px);
+  height: auto;
+}
+
+.bottom-globe-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #475569;
+  line-height: 1.35;
+}
+
+/* ── Responsive Adaptations ── */
+@media (max-width: 1350px) {
+  .tracks-left-keywords,
+  .tracks-right-keywords,
+  .tracks-top-cursive {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  .tracks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .tracks-section {
+    padding: 70px 0 30px;
+  }
+
+  .tracks-left-keywords,
+  .tracks-right-keywords,
+  .tracks-top-cursive {
+    display: none;
+  }
+
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tracks-bottom-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tracks-bottom-pill {
+    flex-direction: column;
+    text-align: center;
+    border-radius: 24px;
+    padding: 20px;
+  }
+
+  .tracks-pill-divider {
+    border-left: none;
+    border-top: 1px solid rgba(15, 31, 58, 0.15);
+    padding-left: 0;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,928 @@
+/* ==========================================================================
+   INNOVA X 2026 — CONTACT PAGE COMPONENT STYLES
+   Visual clone of reference image: 16:9 desktop-first, deep navy typography,
+   electric-blue accents, frosted glass panels, and UHD campus scenery.
+   ========================================================================== */
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 85px 32px 50px 32px;
+  background: linear-gradient(
+    180deg,
+    #eff5fc 0%,
+    #f4f8fd 15%,
+    #f8fbfe 35%,
+    #f4f8fd 75%,
+    #eff5fc 100%
+  );
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   Background Campus Scenery with Seamless Left & Bottom Alpha Blend
+   -------------------------------------------------------------------------- */
+.contact-campus-bg-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  max-width: 1060px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contact-campus-glow-aura {
+  position: absolute;
+  top: 25%;
+  right: 22%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.24) 0%, rgba(37, 99, 235, 0.08) 50%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contact-campus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+  opacity: 0.98;
+  filter: contrast(1.05) brightness(1.02) saturate(1.06);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.08) 12%,
+    rgba(0, 0, 0, 0.5) 24%,
+    rgba(0, 0, 0, 0.88) 38%,
+    black 52%
+  ),
+  linear-gradient(
+    to bottom,
+    black 75%,
+    rgba(0, 0, 0, 0.6) 88%,
+    transparent 100%
+  );
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.08) 12%,
+    rgba(0, 0, 0, 0.5) 24%,
+    rgba(0, 0, 0, 0.88) 38%,
+    black 52%
+  );
+}
+
+.contact-campus-blend-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 248, 253, 0.92) 0%,
+    rgba(244, 248, 253, 0.4) 18%,
+    transparent 40%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(240, 246, 255, 0.35) 0%,
+    transparent 35%,
+    transparent 70%,
+    rgba(239, 245, 252, 0.85) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Top Section Header Badge
+   -------------------------------------------------------------------------- */
+.contact-top-sub-header {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.contact-header-center {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-accent-line {
+  width: 38px;
+  height: 1.5px;
+  background: linear-gradient(90deg, rgba(0, 102, 255, 0.2), #0077ff);
+}
+
+.contact-accent-line:last-child {
+  background: linear-gradient(90deg, #0077ff, rgba(0, 102, 255, 0.2));
+}
+
+.contact-event-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: #071a5c;
+}
+
+.contact-hackathon-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #2563eb;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Main Container & Title
+   -------------------------------------------------------------------------- */
+.contact-main-container {
+  position: relative;
+  z-index: 4;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-title-area {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+/* Category Badge with Pulse Dot */
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(26, 86, 219, 0.08);
+  border: 1.5px solid rgba(26, 86, 219, 0.25);
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #1a56db;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(26, 86, 219, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.contact-badge .badge-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00d2ff;
+  box-shadow: 0 0 10px #00d2ff;
+}
+
+.contact-main-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.6rem, 4.6vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 12px 0;
+}
+
+.heading-dark {
+  color: #07173e;
+  text-shadow:
+    0 2px 0 #94a3b8,
+    0 4px 14px rgba(7, 23, 62, 0.28);
+}
+
+.heading-touch-3d {
+  display: inline-block;
+  background: linear-gradient(135deg, #1a56db 0%, #0284c7 45%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.2px #07173e; /* Deep midnight navy outline so it NEVER fades into light sky! */
+  text-shadow:
+    -1px 1px 0 #051336,
+    -2px 2px 0 #030d24,
+    0 4px 16px rgba(7, 25, 72, 0.4),
+    0 0 24px rgba(0, 210, 255, 0.7);
+  filter: drop-shadow(0 4px 14px rgba(26, 86, 219, 0.4));
+}
+
+.contact-sub-text-line1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #08162b;
+  margin: 0 0 4px 0;
+}
+
+.contact-sub-text-line2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 0;
+}
+
+.contact-heading-accent-bar {
+  width: 50px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #00d2ff, #1a56db);
+  border-radius: 9999px;
+  margin: 14px auto 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 210, 255, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Content Grid: 4 Navy Cards + Center Message Form
+   -------------------------------------------------------------------------- */
+.contact-content-grid {
+  display: grid;
+  grid-template-columns: 360px 480px;
+  gap: 28px;
+  justify-content: flex-start;
+  align-items: stretch;
+  max-width: 900px;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: 4 Dark Navy Glass Cards
+   -------------------------------------------------------------------------- */
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  justify-content: space-between;
+}
+
+.contact-navy-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(7, 26, 92, 0.97) 0%, rgba(10, 36, 115, 0.94) 100%);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(147, 197, 253, 0.45);
+  box-shadow: 0 10px 26px rgba(7, 26, 92, 0.22), 0 0 0 1px rgba(96, 165, 250, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-navy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.contact-navy-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 14px 34px rgba(0, 102, 255, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-color: rgba(96, 165, 250, 0.65);
+}
+
+.contact-card-icon-halo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0077ff, #0052cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(0, 119, 255, 0.55);
+}
+
+.contact-card-icon-halo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 2px 0;
+  letter-spacing: -0.01em;
+}
+
+.card-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #60a5fa;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+}
+
+.card-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  margin: 2px 0 0 0;
+  line-height: 1.3;
+}
+
+.contact-card-arrow {
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, 0.55);
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.contact-navy-card:hover .contact-card-arrow {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Center Column: Translucent Frosted Glass Message Form
+   -------------------------------------------------------------------------- */
+.contact-form-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1.5px solid rgba(210, 230, 255, 0.95);
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0 18px 45px rgba(0, 60, 160, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-header-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.form-plane-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0077ff, #0052cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(0, 119, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.form-plane-badge svg {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-10deg) translate(1px, -1px);
+}
+
+.form-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #071a5c;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.form-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+/* Actual Form Fields */
+.contact-actual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #b91c1c;
+  font-size: 0.82rem;
+  font-weight: 600;
+  animation: fadeInShake 0.3s ease;
+}
+
+@keyframes fadeInShake {
+  0% { opacity: 0; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-row-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-field-group {
+  position: relative;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-svg-icon {
+  position: absolute;
+  left: 14px;
+  width: 17px;
+  height: 17px;
+  color: #0077ff;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.input-with-icon input,
+.input-with-icon textarea {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border-radius: 12px;
+  background: rgba(241, 245, 254, 0.75);
+  border: 1.5px solid rgba(18, 107, 255, 0.16);
+  font-size: 0.88rem;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  color: #071a5c;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.22s ease;
+}
+
+.input-with-icon input::placeholder,
+.input-with-icon textarea::placeholder {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.input-with-icon input:focus,
+.input-with-icon textarea:focus {
+  background: #ffffff;
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3.5px rgba(0, 119, 255, 0.16);
+}
+
+.textarea-wrap {
+  align-items: flex-start;
+}
+
+.textarea-wrap .textarea-icon {
+  top: 13px;
+}
+
+.input-with-icon textarea {
+  resize: vertical;
+  min-height: 85px;
+  padding-top: 11px;
+  line-height: 1.45;
+}
+
+/* Submit CTA */
+.contact-submit-btn {
+  width: 100%;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #0066ff 0%, #0099ff 100%);
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0, 102, 255, 0.38);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 4px;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.52);
+  background: linear-gradient(90deg, #005ce6 0%, #0088ee 100%);
+}
+
+.contact-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn-plane-icon {
+  width: 18px;
+  height: 18px;
+  transform: rotate(-10deg);
+}
+
+.btn-arrow-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.contact-submit-btn:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success State */
+.form-success-message {
+  text-align: center;
+  padding: 24px 16px;
+  animation: fadeIn 0.4s ease;
+}
+
+.success-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.45);
+}
+
+.success-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.form-success-message h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #071a5c;
+  margin: 0 0 6px 0;
+}
+
+.form-success-message p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 20px 0;
+  line-height: 1.45;
+}
+
+.reset-btn {
+  padding: 9px 20px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #0066ff;
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: #e2e8f0;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom Frosted Feature Strip
+   -------------------------------------------------------------------------- */
+.contact-bottom-strip-wrap {
+  position: relative;
+  z-index: 4;
+  margin-top: 40px;
+}
+
+.contact-bottom-strip {
+  max-width: 1040px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 9999px;
+  padding: 11px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 60, 160, 0.07);
+}
+
+.contact-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-strip-icon {
+  width: 32px;
+  height: 32px;
+  color: #0077ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-strip-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-strip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.strip-bold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #071a5c;
+  line-height: 1.2;
+}
+
+.strip-light {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.contact-strip-divider {
+  width: 1px;
+  height: 26px;
+  background: rgba(0, 102, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Sub-Footer Row
+   -------------------------------------------------------------------------- */
+.contact-sub-footer-row {
+  position: relative;
+  z-index: 4;
+  max-width: 1180px;
+  width: 100%;
+  margin: 30px auto 0 auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot-brand-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #071a5c;
+}
+
+.foot-brand-motto {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #64748b;
+}
+
+.contact-footer-center {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.foot-social-line {
+  width: 32px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.4));
+}
+
+.contact-footer-center .foot-social-line:last-child {
+  background: linear-gradient(90deg, rgba(0, 102, 255, 0.4), transparent);
+}
+
+.foot-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 102, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #071a5c;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icon-circle svg {
+  width: 14px;
+  height: 14px;
+}
+
+.social-icon-circle:hover {
+  background: #0077ff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.35);
+}
+
+.foot-stay-connected {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.contact-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.foot-right-line {
+  width: 24px;
+  height: 1.5px;
+  background: #0077ff;
+}
+
+.foot-right-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot-right-line1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #071a5c;
+  line-height: 1.2;
+}
+
+.foot-right-line2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .contact-campus-bg-layer {
+    width: 40%;
+    opacity: 0.6;
+  }
+
+  .contact-content-grid {
+    grid-template-columns: 320px 440px;
+    gap: 20px;
+  }
+
+  .contact-bottom-strip {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .contact-campus-bg-layer {
+    display: none;
+  }
+
+  .contact-content-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .contact-bottom-strip {
+    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+    justify-content: center;
+  }
+
+  .contact-strip-divider {
+    display: none;
+  }
+
+  .contact-sub-footer-row {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-section {
+    padding: 65px 16px 40px 16px;
+  }
+
+  .form-row-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-panel {
+    padding: 20px 18px;
+  }
+
+  .contact-navy-card {
+    padding: 12px 14px;
+  }
+
+  .card-value {
+    white-space: normal;
+  }
+
+  .contact-far-right-keywords {
+    display: none;
+  }
+}

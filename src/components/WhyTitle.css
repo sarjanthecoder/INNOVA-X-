@@ -1,0 +1,264 @@
+/* ==========================================================
+   WHY TITLE — 100% PURE CODE 3D METALLIC CHROME TYPOGRAPHY
+   Exact clone of 3D beveled, extruded INNOVA X? design
+   ========================================================== */
+
+.why-title-pure-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+/* ── 1. Top 'W H Y' ── */
+.why-lead-word {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.65rem);
+  font-weight: 900;
+  letter-spacing: 0.55em;
+  color: #0b1a3d;
+  line-height: 1;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(11, 26, 61, 0.15);
+}
+
+/* ── 2. 3D Title Container ── */
+.why-3d-title-container {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0.95;
+}
+
+/* ── 2A. Layer 1: 3D Extruded Depth Underlayer ── */
+.why-title-3d-extrusion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  letter-spacing: -0.01em;
+  color: #030f2c;
+  /* Multi-level stepped drop shadow creating 3D angled side block extrusion */
+  text-shadow:
+    -1px 1px 0px #030d24,
+    -2px 2px 0px #041233,
+    -3px 3px 0px #061842,
+    -4px 4px 0px #082054,
+    -5px 5px 0px #0a296b,
+    -6px 6px 1px #051842,
+    -7px 7px 2px #020b1e,
+    -4px 8px 18px rgba(0, 15, 50, 0.45),
+    0 12px 28px rgba(2, 22, 81, 0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ext-innova {
+  letter-spacing: -0.015em;
+}
+
+.ext-x {
+  margin-left: 2px;
+  color: #001f5c;
+  text-shadow:
+    -1px 1px 0px #002b80,
+    -2px 2px 0px #001a4d,
+    -3px 3px 0px #001033,
+    -4px 4px 0px #00081a,
+    -5px 5px 1px #001f5c,
+    0 0 25px rgba(0, 210, 255, 0.35);
+}
+
+.ext-q {
+  margin-left: 2px;
+  color: #030f2c;
+}
+
+/* ── 2B. Layer 2: Front Glossy Metallic Chrome Face ── */
+.why-title-3d-front {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  letter-spacing: -0.01em;
+}
+
+/* Chrome Metallic Face for 'INNOVA' */
+.chrome-innova {
+  letter-spacing: -0.015em;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef5ff 4%,
+    #7ca5f5 10%,
+    #1b4eb8 24%,
+    #0d2b78 44%,
+    #05184d 50%,
+    #001140 54%,
+    #002270 72%,
+    #0c48b0 90%,
+    #256eff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Top Bevel Highlight Stroke */
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+
+/* Crystalline Prism Prism Face for 'X' */
+.crystal-x {
+  position: relative;
+  display: inline-block;
+  margin-left: 2px;
+  background: linear-gradient(
+    140deg,
+    #00e5ff 0%,
+    #0099ff 20%,
+    #ffffff 42%,
+    #f0abfc 58%,
+    #d946ef 74%,
+    #7e22ce 90%,
+    #1e1b4b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 0 16px rgba(0, 210, 255, 0.5)) drop-shadow(0 0 30px rgba(217, 70, 239, 0.3));
+}
+
+/* Specular Star Lens Glint on X Center */
+.x-glint {
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #ffffff 0%, rgba(255, 255, 255, 0.9) 30%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow:
+    0 0 12px 3px #ffffff,
+    0 0 20px 6px rgba(0, 210, 255, 0.8),
+    0 0 32px 10px rgba(217, 70, 239, 0.5);
+  animation: glintPulse 3s ease-in-out infinite alternate;
+}
+
+.x-glint::before,
+.x-glint::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+}
+
+/* Horizontal sparkle beam */
+.x-glint::before {
+  width: 28px;
+  height: 2px;
+}
+
+/* Vertical sparkle beam */
+.x-glint::after {
+  width: 2px;
+  height: 28px;
+}
+
+@keyframes glintPulse {
+  0% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Metallic Chrome Face for '?' */
+.chrome-q {
+  margin-left: 2px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef5ff 5%,
+    #7ca5f5 12%,
+    #1b4eb8 28%,
+    #0d2b78 48%,
+    #05184d 52%,
+    #001140 56%,
+    #002270 75%,
+    #0c48b0 92%,
+    #256eff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* ── 3. Bottom Subtitle Tagline ── */
+.why-sub-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.62rem, 1.15vw, 0.84rem);
+  font-weight: 800;
+  letter-spacing: 0.38em;
+  color: #0b1a3d;
+  margin-top: 10px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(11, 26, 61, 0.1);
+  text-align: center;
+}
+
+/* ── Responsive Refinements ── */
+@media (max-width: 600px) {
+  .why-sub-tagline {
+    letter-spacing: 0.2em;
+    font-size: 0.6rem;
+  }
+
+  .why-lead-word {
+    letter-spacing: 0.4em;
+    font-size: 0.95rem;
+  }
+
+  .x-glint {
+    width: 10px;
+    height: 10px;
+  }
+
+  .x-glint::before {
+    width: 18px;
+    height: 1.5px;
+  }
+
+  .x-glint::after {
+    width: 1.5px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,548 @@
+/* ========================================================
+   FOOTER SECTION — INNOVA X 2026
+   Organizers, Multi-Column Navigation Mega Menu & Bottom Bar
+   ======================================================== */
+
+.footer-section {
+  background: linear-gradient(
+    180deg,
+    #eff5fc 0%,
+    #f8fbfe 25%,
+    #ffffff 65%,
+    #ffffff 100%
+  );
+  padding-top: 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ========================================================
+   1. SPONSORS / ORGANIZER SHOWCASE CONTAINER
+   ======================================================== */
+.footer-sponsors-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px clamp(16px, 3.5vw, 48px) 32px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1.35fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* 1. College Organizer Block */
+.sponsor-block-college {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.college-building-thumb {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  opacity: 0.95;
+  box-shadow: 0 4px 14px rgba(10, 31, 68, 0.08);
+}
+
+.college-org-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.college-crest-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
+}
+
+.org-text-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.org-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.org-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #0b192c;
+  letter-spacing: -0.2px;
+}
+
+.org-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #0b192c;
+  letter-spacing: -0.2px;
+}
+
+.org-city {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+/* 2. Innovation Hacks Sponsor Block */
+.sponsor-block-ih {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ih-sponsor-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.ih-sponsor-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ih-logo-thumb {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+}
+
+.ih-sponsor-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.ih-sponsor-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #0b192c;
+  letter-spacing: -0.2px;
+}
+
+.ih-sponsor-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #1a56db;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* 3. Brighter Tomorrow CTA Card */
+.sponsor-block-banner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.brighter-tomorrow-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 88px;
+  background: linear-gradient(135deg, #092048 0%, #0e306e 40%, #174898 80%, #2058b8 100%);
+  border-radius: 18px;
+  padding: 14px 22px;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(10, 35, 90, 0.16);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brighter-tomorrow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(10, 35, 90, 0.24);
+}
+
+.card-top-prefix {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #93c5fd;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.card-main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.08rem;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.card-tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  color: #60a5fa;
+  margin-top: 4px;
+}
+
+.card-arrow-circle {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.card-arrow-circle svg {
+  width: 15px;
+  height: 15px;
+  stroke: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.brighter-tomorrow-card:hover .card-arrow-circle {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.brighter-tomorrow-card:hover .card-arrow-circle svg {
+  transform: translateX(2px);
+}
+
+.card-cursive-quote {
+  position: absolute;
+  bottom: 8px;
+  right: 62px;
+  font-family: 'Caveat', cursive;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  pointer-events: none;
+}
+
+/* ========================================================
+   2. FOOTER NAVIGATION MEGA MENU GRID
+   ======================================================== */
+.footer-menu-section {
+  border-top: 1px solid rgba(220, 235, 252, 0.9);
+  padding: 44px 0 38px;
+  background: transparent;
+}
+
+.footer-menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3.5vw, 48px);
+  display: grid;
+  grid-template-columns: 1.6fr 1.05fr 1.15fr 1.25fr 1.15fr;
+  gap: clamp(20px, 2.6vw, 40px);
+}
+
+/* Brand Column */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-lockup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.footer-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: rgba(26, 86, 219, 0.08);
+  border: 1px solid rgba(26, 86, 219, 0.22);
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #1a56db;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+
+.footer-brand-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00d2ff;
+  box-shadow: 0 0 8px #00d2ff;
+}
+
+.footer-brand-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: 1.65rem;
+  letter-spacing: -0.02em;
+  color: #08162b;
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-brand-title .brand-accent {
+  background: linear-gradient(135deg, #0284c7 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-brand-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #0369a1;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  max-width: 320px;
+}
+
+.footer-pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #0284c7;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  padding: 5px 12px;
+  border-radius: 9999px;
+}
+
+/* Nav Menu Columns */
+.footer-menu-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 0.88rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #0284c7; /* Vibrant Ocean Blue Heading */
+  margin: 0 0 18px;
+  line-height: 1.2;
+}
+
+.heading-accent-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00d2ff;
+  box-shadow: 0 0 8px #00d2ff;
+}
+
+.footer-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-list li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #0369a1; /* Rich Ocean Blue Links */
+  text-decoration: none;
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-link-list li a:hover {
+  color: #00b4d8; /* Glowing Cyan Hover */
+  text-shadow: 0 0 12px rgba(0, 180, 216, 0.45);
+  transform: translateX(4px);
+}
+
+/* Highlight Unstop CTA in Footer Menu */
+.footer-highlight-cta {
+  background: linear-gradient(135deg, #0284c7 0%, #00b4d8 100%);
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 0.8rem !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  transition: all 0.25s ease;
+}
+
+.footer-highlight-cta svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.footer-highlight-cta:hover {
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.45);
+  transform: translateY(-2px) scale(1.03) !important;
+}
+
+.footer-highlight-cta:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ========================================================
+   3. BOTTOM LEGAL & SOCIAL BAR
+   ======================================================== */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(186, 230, 253, 0.8);
+  background: #f8fcff;
+}
+
+.footer-bottom-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px clamp(16px, 3.5vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0369a1; /* Ocean Blue */
+}
+
+.footer-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0284c7; /* Ocean Blue */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-links a:hover {
+  color: #00b4d8;
+}
+
+.footer-nav-links .pipe {
+  color: #bae6fd;
+  font-size: 0.75rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0284c7; /* Ocean Blue */
+  transition: all 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+  color: #00d2ff;
+  transform: translateY(-2px);
+}
+
+.footer-social-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+@media (max-width: 1200px) {
+  .footer-menu-container {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-sponsors-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sponsor-block-banner {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-menu-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-col-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-menu-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

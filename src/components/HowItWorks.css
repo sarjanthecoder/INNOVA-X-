@@ -1,0 +1,595 @@
+/* ========================================================
+   HOW IT WORKS — INNOVA X 2026
+   Ultra High Fidelity Design System & Layout
+   Exact visual clone of reference image
+   ======================================================== */
+
+.hiw-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Pure white + very light sky-blue gradient matching reference */
+  background: linear-gradient(
+    180deg,
+    #eff5fc 0%,
+    #f4f8fd 15%,
+    #f8fbfe 35%,
+    #ffffff 55%,
+    #f4f8fd 80%,
+    #eff5fc 100%
+  );
+  padding: 100px 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ── 1. Left Handwritten Cursive Script ── */
+.hiw-left-cursive {
+  position: absolute;
+  top: 130px;
+  left: clamp(20px, 4vw, 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: rotate(-8deg);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hiw-left-cursive span {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+  font-weight: 700;
+  color: #0a1b3a;
+  line-height: 1.15;
+}
+
+.cursive-underline-left {
+  width: 65px;
+  height: 2.5px;
+  background: #1a56db;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+/* ── 2. Right Handwritten Cursive Script ── */
+.hiw-right-cursive {
+  position: absolute;
+  top: 135px;
+  right: clamp(20px, 4vw, 75px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: rotate(-7deg);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hiw-right-cursive span {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(1.25rem, 1.7vw, 1.65rem);
+  font-weight: 700;
+  color: #0a1b3a;
+  line-height: 1.2;
+}
+
+/* ── 3. Hero Header Area ── */
+.hiw-header {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 50px;
+  padding: 0 24px;
+}
+
+/* 3D Metallic Chrome Title 'HOW IT WORKS' */
+.hiw-title-3d-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 0.95;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+/* 3D Extrusion Shadow */
+.hiw-title-extrusion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(3rem, 7.5vw, 6.2rem);
+  letter-spacing: -0.015em;
+  color: #030f2c;
+  text-shadow:
+    -1px 1px 0px #030d24,
+    -2px 2px 0px #041233,
+    -3px 3px 0px #061842,
+    -4px 4px 0px #082054,
+    -5px 5px 0px #0a296b,
+    -6px 6px 1px #051842,
+    -4px 8px 18px rgba(0, 15, 50, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ext-works {
+  color: #002b80;
+  text-shadow:
+    -1px 1px 0px #003db3,
+    -2px 2px 0px #002b80,
+    -3px 3px 0px #001f5c,
+    -4px 4px 0px #00143d,
+    0 0 24px rgba(0, 180, 255, 0.4);
+}
+
+/* Front Face */
+.hiw-title-front {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 950;
+  font-size: clamp(3rem, 7.5vw, 6.2rem);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.chrome-howit {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef5ff 4%,
+    #7ca5f5 10%,
+    #1b4eb8 24%,
+    #0d2b78 44%,
+    #05184d 50%,
+    #001140 54%,
+    #002270 72%,
+    #0c48b0 90%,
+    #1e60ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+}
+
+.chrome-works {
+  background: linear-gradient(
+    180deg,
+    #00e5ff 0%,
+    #00aaff 20%,
+    #ffffff 42%,
+    #2563eb 68%,
+    #0d38a0 90%,
+    #061a55 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.85);
+  filter: drop-shadow(0 0 20px rgba(0, 190, 255, 0.45));
+}
+
+.hiw-sub-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.72rem, 1.2vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  color: #0b1a3d;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hiw-lead-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.88rem, 1.15vw, 1.05rem);
+  color: #475569;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* ── 4. Process Cards Flow with Connecting Chevrons ── */
+.hiw-cards-flow-wrap {
+  position: relative;
+  z-index: 5;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 40px);
+}
+
+.hiw-cards-flow {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.hiw-card-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Individual Process Card */
+.hiw-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 235, 252, 0.95);
+  border-radius: 20px;
+  padding: 44px 18px 24px;
+  box-shadow: 0 8px 28px rgba(10, 31, 68, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 36px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 230px;
+}
+
+.hiw-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(26, 86, 219, 0.16);
+  border-color: rgba(37, 99, 235, 0.35);
+  background: #ffffff;
+}
+
+/* Large Circular Electric-Blue Icon Container */
+.hiw-icon-halo {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #0099ff 0%, #1a56db 60%, #0d38a0 100%);
+  border: 4px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.hiw-card:hover .hiw-icon-halo {
+  transform: translateX(-50%) scale(1.08);
+  box-shadow: 0 8px 26px rgba(0, 136, 255, 0.55);
+}
+
+.hiw-icon-circle {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiw-icon-circle svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Step Number */
+.hiw-step-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a56db;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* Step Title */
+.hiw-step-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #0a1b3a;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+/* Step Description */
+.hiw-step-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.76rem;
+  color: #475569;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* Connecting Chevron */
+.hiw-connector-chevron {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a56db;
+  margin: 36px 6px 0;
+  flex-shrink: 0;
+}
+
+.hiw-connector-chevron svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── 5. Photographic Panorama Campus Lower Section ── */
+.hiw-campus-lower-section {
+  position: relative;
+  width: 100%;
+  margin-top: -30px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* Soft Gradient Blend Transition from Cards */
+.hiw-campus-top-blend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, #f8fbfe 0%, rgba(248, 251, 254, 0) 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hiw-campus-bg-img {
+  width: 100%;
+  height: auto;
+  min-height: 480px;
+  max-height: 720px;
+  display: block;
+  object-fit: cover;
+  object-position: center bottom;
+  filter: contrast(1.02) brightness(1.01);
+}
+
+/* Center Pill CTA Wrap — Placed Elegantly in Courtyard Foreground */
+.hiw-cta-center-wrap {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+}
+
+.hiw-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #0940b5 0%, #1765e6 50%, #0091ff 100%);
+  background-size: 200% auto;
+  color: #ffffff;
+  padding: 16px 42px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow:
+    0 10px 32px rgba(0, 119, 255, 0.48),
+    0 0 24px rgba(0, 180, 255, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.85);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.hiw-btn-cta:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow:
+    0 14px 42px rgba(0, 119, 255, 0.7),
+    0 0 32px rgba(0, 210, 255, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  border-color: #ffffff;
+}
+
+.cta-arrow-icon {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease;
+}
+
+.hiw-btn-cta:hover .cta-arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Bottom Feature Strip Wrap */
+.hiw-bottom-strip-wrap {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 6;
+  padding: 0 20px;
+}
+
+.hiw-bottom-strip {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 9999px;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.strip-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strip-icon {
+  width: 22px;
+  height: 22px;
+  color: #1a56db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.strip-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.strip-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.strip-main {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #0a1b3a;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+.strip-sub {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+}
+
+.strip-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(15, 31, 58, 0.15);
+}
+
+.strip-branding {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.strip-brand-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #0a1b3a;
+  letter-spacing: 0.15em;
+}
+
+.strip-brand-motto {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #1a56db;
+}
+
+/* ── Responsive Adaptations ── */
+@media (max-width: 1050px) {
+  .hiw-cards-flow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .hiw-connector-chevron {
+    display: none;
+  }
+
+  .hiw-bottom-strip {
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .strip-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hiw-section {
+    padding-top: 70px;
+  }
+
+  .hiw-left-cursive,
+  .hiw-right-cursive {
+    display: none;
+  }
+
+  .hiw-cards-flow {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hiw-campus-lower-section {
+    margin-top: 20px;
+  }
+
+  .hiw-cta-center-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    margin: 24px 0;
+  }
+
+  .hiw-bottom-strip-wrap {
+    position: relative;
+    bottom: auto;
+    margin-top: 16px;
+  }
+
+  .hiw-bottom-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .strip-item {
+    justify-content: center;
+  }
+
+  .strip-branding {
+    padding-left: 0;
+    margin-top: 6px;
+  }
+}
